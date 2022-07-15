@@ -1,17 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+
 import './App.css';
 import github from './icons/github.svg';
 import linkedin from './icons/linkedin.svg';
 import cat from './icons/cat.svg';
 import work from './icons/work.svg';
 import education from './icons/education.svg';
+import calender from './icons/calender.svg';
+
 function App() {
+	const [ workIsShown, setIsShown ] = useState(true);
+
+	const handleWorkClick = (event) => {
+		setIsShown(true);
+	};
+
+	const handleEducationClick = (event) => {
+		setIsShown(false);
+	};
+
 	return (
 		<div>
 			<div className="font-[Poppins] flex flex-col h-screen w-full bg-cover bg-[url('https://s3-alpha-sig.figma.com/img/4d01/9258/132506b7dfdd6884efb5d11b548183d4?Expires=1658707200&Signature=EsO8aT~4FgoXIFugn~jd92uuiA8BiPWQz1TxnFRlnwhM~iOynLuqOCO2y2A3p6drOVLjXqVahq7vzgKzMIT3xjm6nSX-~~TsZpZmqPLVVoiPVf6URNXIraLLD6qvb1MUnPw3QMHhQnuLTlSTpKLhy1trTIfU5S1GAp7GPxdXUJh~7soLTBR2nh2vqTX~5vAS07PqyBDo0oYXYGdWXwBpYffX59R1I~MZhrIgJhcFevkBEbx4UZECxBpMISC3HnJnllaptO9xX9xzCHF891kdVZbDmf1OKzbe6NEB3~9WmfkaLw8QYUF0zjuaJaBrmuY6T8yBoC74z8rQtarVwAU4Tw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA')]">
 				{/* top bar */}
 				<div className="h-[11%] border-[0.5px] font-semibold  border-gray flex flex-row text-primary">
-					<div className="text-[36px] py-4 px-6 tracking-widest w-[65%]"> WELCOME </div>
+					<div className="text-[36px] py-4 px-6 tracking-widest w-[65%]"> ♥ WELCOME ╰(●’◡’●)╮ ♥</div>
 					<div className="text-[18px] py-8 px-6 flex flex-row gap-[70px]">
 						<div>ABOUT</div>
 						<div>SKILLS</div>
@@ -80,34 +93,53 @@ function App() {
 						</div>
 
 						{/* Qualification */}
-						<div className="h-[50%] flex flex-col gap-2">
+						<div className="h-[50%] flex flex-col gap-1">
 							<div className="h-[20%] flex flex-row gap-5">
 								<div className="text-[32px] font-semibold text-primary">Qualification</div>
 								<div className="text-[12px] font-medium text-[#616161] mt-5">My personal journey</div>
 							</div>
-
-							<div className="h-[20%] flex flex-row gap-[110px]">
-								
-								<img src={work} class="h-[24px]" alt="meow" />
-								<img src={education} class="h-[24px]" alt="meow" />
-							</div>
-							<div className="h-[2px] bg-[#DBDBDB]"></div>
-							<div className="h-[60%] flex flex-row gap-[40px]">
-								<div className="h-[150px] w-[200px] flex flex-col border-[#DBDBDB] border-[2px] rounded-[10px] px-6 py-6">
-									<div className="h-[60%]">
-1
+							<div className="h-[20%] flex flex-col gap-2 ml-2">
+								<div className="flex flex-row gap-[110px]" >
+									<div onClick={handleWorkClick}>
+									<img src={work} class="h-[24px]" alt="work" />
 									</div>
-									<div className="h-[20%]">
-2
-									</div>
-									<div className="h-[20%]">
-3
+									<div onClick={handleEducationClick}>
+									<img src={education} class="h-[24px]" alt="education" />
 									</div>
 								</div>
+								<div className="h-[2px] bg-[#DBDBDB]" />
 							</div>
+							{workIsShown && (
+								<div className="h-[60%] flex flex-row gap-[35px]">
+									<Card title="Front-end developer Intern" company="Groovv" time="2022.6 - Present" />
+									<Card title="Software Engineer Intern" company="Ucredit" time="2022.5 - Present" />
+									<Card title="Course Assistant & Personalized Tutor" company="Johns Hopkins University" time="2021.9 - Present" />
+									<Card title="Project Manager Intern" company="ByteDance" time="2021.5 - 2021.7" />
+								</div>
+							)}
+
+							{!workIsShown && (
+								<div className="h-[60%] flex flex-row gap-[35px]">
+									<Card title="Johns Hopkins University" company="Baltimore, MD" time="2020.9 - 2024.5" />
+									<Card title="Beijing No.101 Middle School" company="Beijing, China" time="2018.9 - 2020.5" />
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	);
+}
+
+function Card(props) {
+	return (
+		<div className="tracking-wide h-[170px] w-[240px] flex flex-col gap-4 border-[#DBDBDB] border-[2px] rounded-[10px] px-6 py-5">
+			<div className="h-[75%] text-[14px] font-semibold text-[#383838]">{props.title}</div>
+			<div className="h-[10%] text-[14px] font-medium text-[#000000]">{props.company}</div>
+			<div className="h-[15%] flex flex-row">
+				<img src={calender} class="scale-[90%]" alt="time" />
+				<div className="text-[#616161] text-[12px] font-regular ml-2">{props.time}</div>
 			</div>
 		</div>
 	);

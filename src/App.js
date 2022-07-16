@@ -51,7 +51,7 @@ import chess from './icons/proj/chess.svg';
 
 function App() {
 	const [ catURL, setCat ] = useState(cat3);
-	let catSeries = [ cat1, cat2, cat3, cat4, cat5, cat6];
+	let catSeries = [ cat1, cat2, cat3, cat4, cat5, cat6 ];
 	function clickMeow() {
 		setCat(catSeries[Math.floor(Math.random() * catSeries.length)]);
 	}
@@ -63,8 +63,7 @@ function App() {
 					{/* top bar */}
 					<div className="h-[90px] fixed w-screen border-[0.5px] font-semibold  border-gray flex flex-row text-primary">
 						<div className="text-[36px] py-4 px-6 tracking-widest w-[65%] flex flex-row">
-							
-							Tickle <div className="text-[16px]"> (Click) </div> the cat ♥ ๑乛◡乛๑ 
+							Tickle <div className="text-[16px]"> (Click) </div> the cat ♥ ๑乛◡乛๑
 						</div>
 						<div className="text-[18px] py-8 px-6 flex flex-row gap-[70px] ">
 							<a
@@ -93,7 +92,12 @@ function App() {
 							</a>
 						</div>
 
-						<img src={catURL} class="scale-[60%] hover:url-figma ml-5" onClick={clickMeow} alt="meow" />
+						<img
+							src={catURL}
+							class=" h-full w-[50px] hover:url-figma ml-7"
+							onClick={clickMeow}
+							alt="meow"
+						/>
 					</div>
 
 					<div className="h-[89%] mt-[90px] flex flex-row ">
@@ -180,12 +184,12 @@ function Game() {
 	return (
 		<div className="font-[Poppins] pt-4 flex flex-col px-[120px] ml-2 gap-5">
 			<div className="h-[12%] font-semibold text-[#383838] text-center">
-				<div className="text-[34px]">Frontend</div>
+				<div className="text-[34px]">Game</div>
 				<div className="text-[16px] font-medium text-[#616161] top-[20%]">My recent Work</div>
 			</div>
 			<div className="h-[80%] flex flex-col gap-14 ">
-				<div className="h-[25%] flex flex-row gap-16 ">
-					<img src={ruby} className="scale-[120%]" />
+				<div className="h-[25%] flex flex-row gap-12 ">
+					<img src={ruby} className="h-[150px] w-full" />
 					<ProjectIntro
 						type="long"
 						title="Ruby's Advanture"
@@ -193,8 +197,8 @@ function Game() {
 						content="A 2D adventure game that introduces me to 2D game development and coding. A town is in peril after their friendly robots become broken! It's Ruby's quest to fix them!"
 					/>
 				</div>
-				<div className="h-[25%] flex flex-row gap-16 ">
-					<img src={space} className="scale-[120%]" />
+				<div className="h-[25%] flex flex-row gap-14 ">
+					<img src={space} className="h-[150px] w-full" />
 					<ProjectIntro
 						type="long"
 						website="https://space-invaders-jluo30.netlify.app"
@@ -203,11 +207,11 @@ function Game() {
 						content="The classic arcade game written in Javascript."
 					/>
 				</div>
-				<div className="h-[25%] flex flex-row gap-16">
-					<img src={meme} className="scale-[118%] " />
+				<div className="h-[25%] flex flex-row gap-14">
+					<img src={meme} className="h-[150px] w-full" />
 					<ProjectIntro
 						type="long"
-						title="Meme"
+						title="Meme Generator"
 						website="https://meme-generator-jluo30.netlify.app/"
 						github="https://github.com/cs280spring-classroom/meme-generator-Jessie-ghub"
 						content="A React application that randomly generates cute memes. Fetch image data from https://api.imgflip.com/get_memes API."
@@ -227,7 +231,7 @@ function Frontend() {
 			</div>
 			<div className="h-[80%] flex flex-col gap-14 ">
 				<div className="h-[25%] flex flex-row gap-16 ">
-					<img src={ucredit} className="scale-[120%]" />
+					<img src={ucredit} className="h-[156px] w-full" />
 					<ProjectIntro
 						type="long"
 						title="Ucredit"
@@ -236,7 +240,7 @@ function Frontend() {
 					/>
 				</div>
 				<div className="h-[25%] flex flex-row gap-16 ">
-					<img src={bloochat} className="scale-[120%]" />
+					<img src={bloochat} className="h-[156px] w-full" />
 					<ProjectIntro
 						type="long"
 						website="https://bloochat-jluo30.herokuapp.com"
@@ -246,7 +250,7 @@ function Frontend() {
 					/>
 				</div>
 				<div className="h-[25%] flex flex-row gap-16">
-					<img src={course} className="scale-[118%] " />
+					<img src={course} className="h-[156px] w-full" />
 					<ProjectIntro
 						type="long"
 						title="Course Planner"
@@ -263,24 +267,23 @@ function Frontend() {
 function Backend() {
 	return (
 		<div className="font-[Poppins] pt-4 flex flex-col px-[120px] gap-5">
-			<div className="h-[18%] font-semibold text-[#383838] text-center">
+			<div className="h-[12%] font-semibold text-[#383838] text-center">
 				<div className="text-[34px]">Backend</div>
 				<div className="text-[16px] font-medium text-[#616161] top-[20%]">My recent Work</div>
 			</div>
 			<div className="h-[80%] flex flex-col gap-14 ">
-				<div className="h-[25%] flex flex-row gap-24">
-					<img src={chess} className="scale-[140%]" />
-					<div className="mt-[-15px]">
+				<div className="h-[32%] flex flex-row gap-12">
+					<img src={chess} className="h-[200px] w-full" />
+					<div className="">
 						<ProjectIntro
-							type="long"
-							special="yes"
+							type="ml"
 							title="Chess Console Game"
 							github="https://github.com/robertzhidealx/phase-e"
 							content="The most popular 2-player chess game written in C++. The game features validating a move, storing the moves and captured pieces, saving / loading a game, and Detect and alert Checked Positions, Checkmate and End-of-Game Situations.
 							"
 						/>
 						<a href="https://github.com/JessieLuo30/2021-CS-course-project">
-							<div className="text-[13px] hover:bg-[#D0D7D0]/25 h-[40px] w-[380px] rounded-[50px] font-semibold text-primary border-primary border-2 px-6 py-2">
+							<div className="text-[13px] hover:bg-[#D0D7D0]/25 h-[40px] w-[420px] rounded-[50px] mt-8 font-semibold text-primary border-primary border-2 text-center py-2">
 								Source Code for All Project on this Page and More
 							</div>
 						</a>
@@ -329,9 +332,9 @@ function Databases() {
 				<div className="text-[16px] font-medium text-[#616161] top-[20%]">My recent Work</div>
 			</div>
 			<div className="h-[80%] flex flex-col gap-24">
-				<div className="h-[25%] flex flex-row gap-24 ">
-					<img src={db} className="scale-[140%]" />
-					<div className="mt-[-15px]">
+				<div className="h-[25%] flex flex-row gap-12 ">
+					<img src={db} className="h-[185px] w-full" />
+					<div className="">
 						<ProjectIntro
 							type="long"
 							title="NPM Packages Trend"
@@ -341,11 +344,10 @@ function Databases() {
 						/>
 					</div>
 				</div>
-				<div className="h-[25%] flex flex-row gap-24 ">
-					<img src={research} className="scale-[140%]" />
+				<div className="h-[25%] flex flex-row gap-12 ">
+					<img src={research} className="h-[185px] w-full" />
 					<ProjectIntro
 						type="long"
-						website="https://bloochat-jluo30.herokuapp.com"
 						title="Robotic Lab Experiment Result Analysis"
 						github="https://livejohnshopkins-my.sharepoint.com/:w:/g/personal/jluo30_jh_edu/EQCM6BUPq-hIrDsDsZDfRJgBVgVGAJu8gl03rINftkG4Tg?e=wc6Rfo"
 						content="Automate weekly robot performance evaluations based on experiments data in the logs database using SQL"
@@ -368,19 +370,19 @@ function Skills(props) {
 					<div className="h-1/2 flex flex-col px-6 border-r-2 border-[#DBDBDB] border-dotted items-center">
 						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Frontend</div>
 						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row mt-2 ml-[-100px]">
-							<img src={react} class="scale-[60%]" />
-							<img src={tailwind} class="scale-[60%]  ml-[-60px]  " />
-							<img src={swift} class="scale-[60%] ml-[-60px] " />
+						<div className="h-[200px] flex flex-row mt-2 gap-4">
+							<img src={react} class="w-[125px] h-full" />
+							<img src={tailwind} class="w-[125px] h-full  " />
+							<img src={swift} class="w-[125px] h-full mt-1" />
 						</div>
 					</div>
 
 					<div className="h-1/2 flex flex-col px-6 border-t-2 border-r-2 border-[#DBDBDB] border-dotted items-center">
 						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Databases</div>
 						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row ml-[-70px]">
-							<img src={sql} class="scale-[70%]" />
-							<img src={mongodb} class="scale-[70%] ml-[-40px] " />
+						<div className="h-[200px] flex flex-row gap-6">
+							<img src={sql} class="w-[140px] h-full" />
+							<img src={mongodb} class="w-[140px] h-full" />
 						</div>
 					</div>
 				</div>
@@ -388,20 +390,20 @@ function Skills(props) {
 					<div className="h-1/2 flex flex-col px-6">
 						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Backend</div>
 						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row mt-2 items-center">
-							<img src={c} class="scale-[70%]" />
-							<img src={python} class="scale-[70%]  ml-[-40px]  " />
-							<img src={java} class="scale-[70%]  ml-[-40px] " />
-							<img src={php} class="scale-[70%]  ml-[-40px] " />
+						<div className="h-[200px] flex flex-row mt-2 items-center gap-4 ml-4">
+							<img src={c} class="w-[110px] h-full" />
+							<img src={python} class="w-[110px] h-full" />
+							<img src={java} class="w-[110px] h-full" />
+							<img src={php} class="w-[110px] h-full" />
 						</div>
 					</div>
 					<div className="h-1/2 flex flex-col px-6 border-t-2 border-[#DBDBDB] border-dotted">
 						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Design</div>
 						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row">
-							<img src={figma} class="scale-[70%]" />
-							<img src={powerpoint} class="scale-[70%] ml-[-40px]" />
-							<img src={pr} class="scale-[70%] ml-[-40px]" />
+						<div className="h-[200px] flex flex-row gap-4 ml-14">
+							<img src={figma} class="w-[125px] h-full" />
+							<img src={powerpoint} class="w-[125px] h-full" />
+							<img src={pr} class="w-[125px] h-full" />
 						</div>
 					</div>
 				</div>
@@ -502,38 +504,41 @@ function Portfolio() {
 
 function IOS() {
 	return (
-		<div className="font-[Poppins] pt-4 flex flex-col px-[104px]">
-			<div className="h-[90px] font-semibold text-[#383838] text-center">
-				<div className="text-[34px] left-[56%]">IOS</div>
+		<div className="font-[Poppins] pt-4 flex flex-col px-[110px]">
+			<div className="h-[90px] w-full font-semibold text-[#383838] text-center ml-[50px]">
+				<div className="text-[34px] ">IOS</div>
 				<div className="text-[16px] font-medium text-[#616161] top-[20%] ">My recent Work</div>
 			</div>
 			<div className="h-[260px] flex flex-row gap-12 ">
-				<video width="125" height="170" class=" mt-[-10px]" controls>
+				<video width="125" height="170" class=" absolute mt-[-10px]" controls>
 					<source src={chatroom} type="video/mp4" />
 				</video>
+				<div class=" absolute ml-[170px] mt-[20px]">
 				<ProjectIntro
 					type="medium"
 					title="Flash Chat"
+					
 					content="An internet based messaging application that has authentication built in so that users are able to register and log in, using Firestore as a backend database to store and retrieve our messages from the cloud."
 					github="https://github.com/JessieLuo30/Flash-Chat-iOS13"
 				/>
+				</div>
 			</div>
-			<div className="h-[260px] flex flex-row gap-12 align-right mt-[-13%] ml-[390px] z-30">
+			<div className="h-[260px] flex flex-row gap-12 align-right relative mt-[-125px] ml-[390px] z-30">
 				<ProjectIntro
 					type="short"
 					title="Clima"
 					content="A weather application that allows you to use GPS to get real-time weather data for your current location, or enter the name of a city to check the weather there."
 					github="https://github.com/JessieLuo30/Clima-iOS13"
 				/>
-				<video width="125" height="170" controls>
-					<source src={weather} type="video/mp4" class="h-[250px] mt-[-20px]" />
+				<video width="125" height="170" controls  class=" absolute mt-[-10px] ml-[460px]">
+					<source src={weather} type="video/mp4" class="h-[250px]" />
 				</video>
 			</div>
-			<div className="h-[260px] flex flex-row gap-12 mt-[-10%] z-10">
-				<video width="125" height="170" controls>
-					<source src={quiz} type="video/mp4" class="h-[250px] mt-[-10px]" />
+			<div className="h-[260px] flex flex-row gap-12 z-10 relative mt-[-110px]">
+				<video width="125" height="170" controls  class=" absolute">
+					<source src={quiz} type="video/mp4" class="h-[250px]" />
 				</video>
-				<div class="mt-[50px]">
+				<div class="mt-[50px] ml-[170px]">
 					<ProjectIntro
 						type="medium"
 						title="Quizzler"
@@ -560,11 +565,18 @@ function ProjectIntro(props) {
 					</div>
 				</div>
 			)}
+
+			{props.type == 'ml' && (
+				<div>
+					<div className="text-[22px] font-semibold text-[#383838] ">{props.title}</div>
+					<div className="text-[15px] w-[600px] font-medium text-[#747474] mt-1">{props.content}</div>
+				</div>
+			)}
 			{props.type == 'short' && (
 				<div className="text-right mt-8">
 					<div className="text-[22px] font-semibold text-[#383838] ">{props.title}</div>
 					<div className="text-[15px] w-[420px] font-medium text-[#747474] mt-1">{props.content}</div>
-					<div className="mt-8 ml-[307px]">
+					<div className="mt-8 ml-[296px] ">
 						<CodeButton url={props.github} />
 					</div>
 				</div>
@@ -574,12 +586,10 @@ function ProjectIntro(props) {
 					<div className="text-[22px] font-semibold text-[#383838] ">{props.title}</div>
 					<div className="text-[15px] w-[650px] font-medium text-[#747474] mt-1">{props.content}</div>
 					<div className="mt-8">
-						{!props.special && (
-							<div className="mt-8 flex flex-row gap-4">
-								<CodeButton url={props.github} />
-								{props.website && <WebButton url={props.website} />}
-							</div>
-						)}
+						<div className="mt-8 flex flex-row gap-4">
+							<CodeButton url={props.github} />
+							{props.website && <WebButton url={props.website} />}
+						</div>
 					</div>
 				</div>
 			)}
@@ -590,7 +600,7 @@ function ProjectIntro(props) {
 function CodeButton(props) {
 	return (
 		<a href={props.url}>
-			<div className="hover:bg-[#D0D7D0]/25 text-[13px] h-[33px] w-[115px] rounded-[50px] font-semibold text-primary border-primary border-2 px-3 py-1">
+			<div className="hover:bg-[#D0D7D0]/25 text-[13px] h-[33px] w-[125px] rounded-[50px] font-semibold text-primary border-primary border-2 text-center py-1">
 				Source Code
 			</div>
 		</a>
@@ -600,7 +610,7 @@ function CodeButton(props) {
 function WebButton(props) {
 	return (
 		<a href={props.url}>
-			<div className="hover:bg-[#D0D7D0]/25 text-[13px] h-[33px] w-[80px] rounded-[50px] font-semibold text-[#CEDFD7] border-[#CEDFD7] border-2 px-3 py-1">
+			<div className="hover:bg-[#D0D7D0]/25 text-[13px] h-[33px] w-[85px] rounded-[50px] font-semibold text-[#CEDFD7] border-[#CEDFD7] border-2 text-center py-1">
 				Website
 			</div>
 		</a>

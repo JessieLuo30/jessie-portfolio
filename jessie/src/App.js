@@ -5,7 +5,6 @@ import './App.css';
 import github from './icons/github.svg';
 import linkedin from './icons/linkedin.svg';
 import back from './icons/back.svg';
-import cat from './icons/cat.svg';
 import work from './icons/work.svg';
 import education from './icons/education.svg';
 import gpa from './icons/gpa.svg';

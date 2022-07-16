@@ -40,6 +40,8 @@ import space from './icons/proj/space.svg';
 import meme from './icons/proj/meme.svg';
 import db from './icons/proj/db.svg';
 import research from './icons/proj/research.svg';
+import ruby from './icons/proj/ruby.svg';
+import chess from './icons/proj/chess.svg';
 
 function App() {
 	return (
@@ -49,11 +51,12 @@ function App() {
 					{/* top bar */}
 					<div className="h-[90px] fixed w-screen border-[0.5px] font-semibold  border-gray flex flex-row text-primary">
 						<div className="text-[36px] py-4 px-6 tracking-widest w-[65%]"> ♥ WELCOME ╰(●’◡’●)╮ ♥</div>
-						<div className="text-[18px] py-8 px-6 flex flex-row gap-[70px]">
+						<div className="text-[18px] py-8 px-6 flex flex-row gap-[70px] ">
 							<a
 								onClick={() => {
 									window.location.href = '/';
 								}}
+								className=" hover:text-[#DBDBDB]"
 							>
 								ABOUT
 							</a>
@@ -61,6 +64,7 @@ function App() {
 								onClick={() => {
 									window.location.href = '/skills';
 								}}
+								className=" hover:text-[#DBDBDB]"
 							>
 								SKILLS
 							</a>
@@ -68,6 +72,7 @@ function App() {
 								onClick={() => {
 									window.location.href = '/portfolio';
 								}}
+								className=" hover:text-[#DBDBDB]"
 							>
 								PORTFOLIO
 							</a>
@@ -104,19 +109,26 @@ function App() {
 							</div>
 
 							<div className="h-[6%] flex flex-row items-stretch gap-4">
-								<img src={github} class="" alt="github" />
-								<img src={linkedin} class="" alt="linkedin" />
+								<a href="https://github.com/JessieLuo30">
+									<img src={github} class="" alt="github" />
+								</a>
+								<a href="https://www.linkedin.com/in/jessie-luo-bc076/">
+									<img src={linkedin} class="" alt="linkedin" />
+								</a>
 							</div>
 							<div className="h-[18%]">
 								<a href="mailto:jluo30@jhu.edu">
-									<button className="py-2 h-[44px] w-[164px] rounded-[100px] bg-primary text-center">
-										<div className="text-[16px] font-semibold text-white">Contact Me</div>
+									<button className="py-2 h-[44px] w-[164px] rounded-[100px] bg-primary text-center hover:bg-[#8EA8DC] ">
+										<div className="text-[16px] font-semibold text-white ">Contact Me</div>
 									</button>
 								</a>
 							</div>
 						</div>
 						<Switch>
 							<Route exact path="/">
+								<About />
+							</Route>
+							<Route exact path="/about">
 								<About />
 							</Route>
 							<Route exact path="/portfolio">
@@ -129,13 +141,13 @@ function App() {
 								<Frontend />
 							</Route>
 							<Route path="/portfolio/backend">
-								<IOS />
+								<Backend />
 							</Route>
 							<Route path="/portfolio/databases">
 								<Databases />
 							</Route>
 							<Route path="/portfolio/game">
-								<IOS />
+								<Game />
 							</Route>
 							<Route path="/skills">
 								<Skills />
@@ -145,6 +157,48 @@ function App() {
 				</div>
 			</div>
 		</Router>
+	);
+}
+
+function Game() {
+	return (
+		<div className="font-[Poppins] pt-4 flex flex-col px-[120px] ml-2 gap-5">
+			<div className="h-[12%] font-semibold text-[#383838] text-center">
+				<div className="text-[34px]">Frontend</div>
+				<div className="text-[16px] font-medium text-[#616161] top-[20%]">My recent Work</div>
+			</div>
+			<div className="h-[80%] flex flex-col gap-14 ">
+				<div className="h-[25%] flex flex-row gap-16 ">
+					<img src={ruby} className="scale-[120%]" />
+					<ProjectIntro
+						type="long"
+						title="Ruby's Advanture"
+						github="https://learn.unity.com/project/ruby-s-2d-rpg?uv=2020.3"
+						content="A 2D adventure game that introduces me to 2D game development and coding. A town is in peril after their friendly robots become broken! It's Ruby's quest to fix them!"
+					/>
+				</div>
+				<div className="h-[25%] flex flex-row gap-16 ">
+					<img src={space} className="scale-[120%]" />
+					<ProjectIntro
+						type="long"
+						website="https://space-invaders-jluo30.netlify.app"
+						title="Space Invaders"
+						github="https://github.com/cs280spring-classroom/space-invaders-Jessie-ghub"
+						content="The classic arcade game written in Javascript."
+					/>
+				</div>
+				<div className="h-[25%] flex flex-row gap-16">
+					<img src={meme} className="scale-[118%] " />
+					<ProjectIntro
+						type="long"
+						title="Meme"
+						website="https://meme-generator-jluo30.netlify.app/"
+						github="https://github.com/cs280spring-classroom/meme-generator-Jessie-ghub"
+						content="A React application that randomly generates cute memes. Fetch image data from https://api.imgflip.com/get_memes API."
+					/>
+				</div>
+			</div>
+		</div>
 	);
 }
 
@@ -190,6 +244,67 @@ function Frontend() {
 	);
 }
 
+function Backend() {
+	return (
+		<div className="font-[Poppins] pt-4 flex flex-col px-[120px] gap-5">
+			<div className="h-[18%] font-semibold text-[#383838] text-center">
+				<div className="text-[34px]">Backend</div>
+				<div className="text-[16px] font-medium text-[#616161] top-[20%]">My recent Work</div>
+			</div>
+			<div className="h-[80%] flex flex-col gap-14 ">
+				<div className="h-[25%] flex flex-row gap-24">
+					<img src={chess} className="scale-[140%]" />
+					<div className="mt-[-15px]">
+						<ProjectIntro
+							type="long"
+							special="yes"
+							title="Chess Console Game"
+							github="https://github.com/robertzhidealx/phase-e"
+							content="The most popular 2-player chess game written in C++. The game features validating a move, storing the moves and captured pieces, saving / loading a game, and Detect and alert Checked Positions, Checkmate and End-of-Game Situations.
+							"
+						/>
+						<a href="https://github.com/JessieLuo30/2021-CS-course-project">
+							<div className="text-[13px] hover:bg-[#D0D7D0]/25 h-[40px] w-[380px] rounded-[50px] font-semibold text-primary border-primary border-2 px-6 py-2">
+								Source Code for All Project on this Page and More
+							</div>
+						</a>
+					</div>
+				</div>
+				<div className="h-[25%] flex flex-row ">
+					<div className="flex flex-col gap-7 mt-2">
+						<div>
+							<div className="text-[22px] font-semibold text-[#383838] "> Audio Processing</div>
+							<div className="text-[15px] w-[950px] font-medium text-[#747474] mt-1">
+								A C application that allows users to perform tasks including song production, remix, and
+								echo
+							</div>
+						</div>
+						<div>
+							<div className="text-[22px] font-semibold text-[#383838] ">
+								{' '}
+								Course Registration Pre-req Check Helper{' '}
+							</div>
+							<div className="text-[15px] w-[950px] font-medium text-[#747474] mt-1">
+								A Java implemented algorithm built on directed graph and binary tree
+							</div>
+						</div>
+						<div>
+							<div className="text-[22px] font-semibold text-[#383838] "> Digraph Analyzer</div>
+							<div className="text-[15px] w-[950px] font-medium text-[#747474] mt-1">
+								A C++ program to analyze digraphs and trigraphs in an input text file. If a number is
+								entered, list all the digraphs/trigraphs (in ASCII order) that occur that many times and
+								their corresponding containing words. If a digraph/trigraph is entered, list how many
+								times the digraph/trigraph occurs and in which words (in order of their appearance in
+								the text).
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+}
+
 function Databases() {
 	return (
 		<div className="font-[Poppins] pt-4 flex flex-col px-[120px] ml-2 gap-5">
@@ -201,13 +316,13 @@ function Databases() {
 				<div className="h-[25%] flex flex-row gap-24 ">
 					<img src={db} className="scale-[140%]" />
 					<div className="mt-[-15px]">
-					<ProjectIntro
-						type="long"
-						title="NPM Packages Trend"
-						website="https://ugrad.cs.jhu.edu/~jluo30/phase-e/jzhan239_jluo30.html"
-						github="https://github.com/robertzhidealx/phase-e"
-						content="A database system that supports complex SQL queries regarding patterns and trends in JavaScript development. Database populated by real-world data from GITHUB and NPM API."
-					/>
+						<ProjectIntro
+							type="long"
+							title="NPM Packages Trend"
+							website="https://ugrad.cs.jhu.edu/~jluo30/phase-e/jzhan239_jluo30.html"
+							github="https://github.com/robertzhidealx/phase-e"
+							content="A database system that supports complex SQL queries regarding patterns and trends in JavaScript development. Database populated by real-world data from GITHUB and NPM API."
+						/>
 					</div>
 				</div>
 				<div className="h-[25%] flex flex-row gap-24 ">
@@ -220,7 +335,6 @@ function Databases() {
 						content="Automate weekly robot performance evaluations based on experiments data in the logs database using SQL"
 					/>
 				</div>
-				
 			</div>
 		</div>
 	);
@@ -229,11 +343,11 @@ function Databases() {
 function Skills(props) {
 	return (
 		<div className="font-[Poppins] py-8 w-[1150px] flex flex-col text-center items-center">
-			<div className="h-[20%] text-center">
+			<div className="h-[18%] text-center">
 				<div className="text-[40px] font-semibold text-[#383838]">Skills</div>
 				<div className="text-[18px] font-medium text-[#616161]">My technical level</div>
 			</div>
-			<div className="h-[80%] w-full flex flex-row px-7 items-center">
+			<div className="h-[80%] w-full flex flex-row px-6 items-center mr-1">
 				<div className="w-1/2 h-full flex flex-col">
 					<div className="h-1/2 flex flex-col px-6 border-r-2 border-[#DBDBDB] border-dotted items-center">
 						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Frontend</div>
@@ -350,7 +464,7 @@ function Portfolio() {
 					window.location.href = '/portfolio/databases';
 				}}
 			>
-				<div className="absolute left-[72%] top-[68%] h-[85px] w-[280px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
+				<div className="absolute left-[71%] top-[68%] h-[85px] w-[280px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
 					<div className="text-[32px] font-lg text-[#616161]">Databases</div>
 				</div>
 			</a>
@@ -363,9 +477,9 @@ function Portfolio() {
 					<div className="text-[32px] font-lg text-[#616161]">Game</div>
 				</div>
 			</a>
-			<div className="absolute left-[32%] top-[81%] h-[85px] w-[280px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
+			{/* <div className="absolute left-[32%] top-[81%] h-[85px] w-[280px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
 				<div className="text-[32px] font-lg text-[#616161]">Crochet 🧶</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
@@ -444,14 +558,13 @@ function ProjectIntro(props) {
 					<div className="text-[22px] font-semibold text-[#383838] ">{props.title}</div>
 					<div className="text-[15px] w-[650px] font-medium text-[#747474] mt-1">{props.content}</div>
 					<div className="mt-8">
-					<div className="mt-8 flex flex-row gap-4">
-						<CodeButton url={props.github} />
-						{props.website && (
-							<WebButton url={props.website} />
+						{!props.special && (
+							<div className="mt-8 flex flex-row gap-4">
+								<CodeButton url={props.github} />
+								{props.website && <WebButton url={props.website} />}
+							</div>
 						)}
 					</div>
-					</div>
-					
 				</div>
 			)}
 		</div>
@@ -461,8 +574,8 @@ function ProjectIntro(props) {
 function CodeButton(props) {
 	return (
 		<a href={props.url}>
-			<div className="text-[13px] h-[33px] w-[115px] rounded-[50px] font-semibold text-primary border-primary border-2 px-3 py-1">
-				Code Source
+			<div className="hover:bg-[#D0D7D0]/25 text-[13px] h-[33px] w-[115px] rounded-[50px] font-semibold text-primary border-primary border-2 px-3 py-1">
+				Source Code
 			</div>
 		</a>
 	);
@@ -471,7 +584,7 @@ function CodeButton(props) {
 function WebButton(props) {
 	return (
 		<a href={props.url}>
-			<div className="text-[13px] h-[33px] w-[80px] rounded-[50px] font-semibold text-[#CEDFD7] border-[#CEDFD7] border-2 px-3 py-1">
+			<div className="hover:bg-[#D0D7D0]/25 text-[13px] h-[33px] w-[80px] rounded-[50px] font-semibold text-[#CEDFD7] border-[#CEDFD7] border-2 px-3 py-1">
 				Website
 			</div>
 		</a>

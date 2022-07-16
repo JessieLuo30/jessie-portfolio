@@ -29,6 +29,13 @@ import java from './icons/backend/java.svg';
 import php from './icons/backend/php.svg';
 import python from './icons/backend/python.svg';
 
+import cat1 from './icons/cats/cat1.svg';
+import cat2 from './icons/cats/cat2.svg';
+import cat3 from './icons/cats/cat3.svg';
+import cat4 from './icons/cats/cat4.svg';
+import cat5 from './icons/cats/cat5.svg';
+import cat6 from './icons/cats/cat6.svg';
+
 import quiz from './videos/quiz.mp4';
 import chatroom from './videos/chatroom.mp4';
 import weather from './videos/weather.mp4';
@@ -44,13 +51,22 @@ import ruby from './icons/proj/ruby.svg';
 import chess from './icons/proj/chess.svg';
 
 function App() {
+	const [ catURL, setCat ] = useState(cat3);
+	let catSeries = [ cat1, cat2, cat3, cat4, cat5, cat6];
+	function clickMeow() {
+		setCat(catSeries[Math.floor(Math.random() * catSeries.length)]);
+	}
+
 	return (
 		<Router>
 			<div>
 				<div className="font-[Poppins] flex flex-col h-screen w-full bg-cover bg-fixed bg-[url('https://s3-alpha-sig.figma.com/img/4d01/9258/132506b7dfdd6884efb5d11b548183d4?Expires=1658707200&Signature=EsO8aT~4FgoXIFugn~jd92uuiA8BiPWQz1TxnFRlnwhM~iOynLuqOCO2y2A3p6drOVLjXqVahq7vzgKzMIT3xjm6nSX-~~TsZpZmqPLVVoiPVf6URNXIraLLD6qvb1MUnPw3QMHhQnuLTlSTpKLhy1trTIfU5S1GAp7GPxdXUJh~7soLTBR2nh2vqTX~5vAS07PqyBDo0oYXYGdWXwBpYffX59R1I~MZhrIgJhcFevkBEbx4UZECxBpMISC3HnJnllaptO9xX9xzCHF891kdVZbDmf1OKzbe6NEB3~9WmfkaLw8QYUF0zjuaJaBrmuY6T8yBoC74z8rQtarVwAU4Tw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA')]">
 					{/* top bar */}
 					<div className="h-[90px] fixed w-screen border-[0.5px] font-semibold  border-gray flex flex-row text-primary">
-						<div className="text-[36px] py-4 px-6 tracking-widest w-[65%]"> ♥ WELCOME ╰(●’◡’●)╮ ♥</div>
+						<div className="text-[36px] py-4 px-6 tracking-widest w-[65%] flex flex-row">
+							
+							Tickle <div className="text-[16px]"> (Click) </div> the cat ♥ ๑乛◡乛๑ 
+						</div>
 						<div className="text-[18px] py-8 px-6 flex flex-row gap-[70px] ">
 							<a
 								onClick={() => {
@@ -77,7 +93,8 @@ function App() {
 								PORTFOLIO
 							</a>
 						</div>
-						<img src={cat} class="scale-[50%]" alt="meow" />
+
+						<img src={catURL} class="scale-[60%] hover:url-figma ml-5" onClick={clickMeow} alt="meow" />
 					</div>
 
 					<div className="h-[89%] mt-[90px] flex flex-row ">

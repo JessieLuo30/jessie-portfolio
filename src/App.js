@@ -119,21 +119,21 @@ function App() {
 								<div className=" text-[#383838] text-[16px] ">Softwear Engineer</div>
 							</div>
 
-							<div className="h-[32%] text-[14px] text-[#616161] text-left font-medium px-16">
+							<div className="h-[32%] text-[14px] text-[#616161] text-left font-medium px-16 ml-2">
 								<div>College student interested in website and IOS development</div>
 								<div className="h-[20px]" />
 								<div>
-									Experience in UI/UX design, project management, and marketing, delivering quality
+									Experience in UI/UX design and project management, delivering quality
 									work.
 								</div>
 							</div>
 
 							<div className="h-[6%] flex flex-row items-stretch gap-4">
-								<a href="https://github.com/JessieLuo30">
-									<img src={github} class="" alt="github" />
+								<a href="https://github.com/JessieLuo30" >
+									<img src={github} class="h-12 w-12 mt-[-15px]" alt="github" />
 								</a>
 								<a href="https://www.linkedin.com/in/jessie-luo-bc076/">
-									<img src={linkedin} class="" alt="linkedin" />
+									<img src={linkedin} class="h-8 w-8" alt="linkedin" />
 								</a>
 							</div>
 							<div className="h-[18%]">

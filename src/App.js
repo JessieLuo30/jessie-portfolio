@@ -39,15 +39,15 @@ import quiz from './videos/quiz.mp4';
 import chatroom from './videos/chatroom.mp4';
 import weather from './videos/weather.mp4';
 
-import bloochat from './icons/proj/bloochat.svg';
-import ucredit from './icons/proj/ucredit.svg';
-import course from './icons/proj/course.svg';
-import space from './icons/proj/space.svg';
-import meme from './icons/proj/meme.svg';
-import db from './icons/proj/db.svg';
-import research from './icons/proj/research.svg';
-import ruby from './icons/proj/ruby.svg';
-import chess from './icons/proj/chess.svg';
+import { ReactComponent as Bloochat } from './icons/proj/bloochat.svg';
+import { ReactComponent as Ucredit } from './icons/proj/ucredit.svg';
+import { ReactComponent as Course } from './icons/proj/course.svg';
+import { ReactComponent as Space } from './icons/proj/space.svg';
+import { ReactComponent as Meme } from './icons/proj/meme.svg';
+import { ReactComponent as Db } from './icons/proj/Db.svg';
+import { ReactComponent as Research } from './icons/proj/Research.svg';
+import { ReactComponent as Ruby } from './icons/proj/ruby.svg';
+import { ReactComponent as Chess } from './icons/proj/chess.svg';
 
 function App() {
 	const [ catURL, setCat ] = useState(cat3);
@@ -64,6 +64,7 @@ function App() {
 					<div className="h-[90px] fixed w-screen border-[0.5px] font-semibold  border-gray flex flex-row text-primary">
 						<div className="text-[36px] py-4 px-6 tracking-widest w-[65%] flex flex-row">
 							Tickle <div className="text-[16px]"> (Click) </div> the cat ♥ ๑乛◡乛๑
+							{/* <Db /> */}
 						</div>
 						<div className="text-[18px] py-8 px-6 flex flex-row gap-[70px] ">
 							<a
@@ -101,8 +102,6 @@ function App() {
 					</div>
 
 					<div className="h-[89%] mt-[90px] flex flex-row ">
-						{/* introduction */}
-
 						<div className="w-[21%] flex flex-col items-center border-gray border-[0.5px] gap-4">
 							<div className="h-[35%]  ">
 								<div className="pl-1 pb-1 h-[172px] w-[172px] bg-primary mt-12 rounded-[86px]">
@@ -189,7 +188,7 @@ function Game() {
 			</div>
 			<div className="h-[80%] flex flex-col gap-14 ">
 				<div className="h-[25%] flex flex-row gap-12 ">
-					<img src={ruby} className="h-[150px] w-full" />
+					<Ruby className="h-[150px] w-full" />
 					<ProjectIntro
 						type="long"
 						title="Ruby's Advanture"
@@ -198,7 +197,7 @@ function Game() {
 					/>
 				</div>
 				<div className="h-[25%] flex flex-row gap-14 ">
-					<img src={space} className="h-[150px] w-full" />
+					<Space className="h-[150px] w-full" />
 					<ProjectIntro
 						type="long"
 						website="https://space-invaders-jluo30.netlify.app"
@@ -208,7 +207,7 @@ function Game() {
 					/>
 				</div>
 				<div className="h-[25%] flex flex-row gap-14">
-					<img src={meme} className="h-[150px] w-full" />
+					<Meme className="h-[150px] w-full" />
 					<ProjectIntro
 						type="long"
 						title="Meme Generator"
@@ -231,16 +230,17 @@ function Frontend() {
 			</div>
 			<div className="h-[80%] flex flex-col gap-14 ">
 				<div className="h-[25%] flex flex-row gap-16 ">
-					<img src={ucredit} className="h-[156px] w-full" />
+					<Ucredit className="h-[156px] w-full" />
 					<ProjectIntro
 						type="long"
+						website="https://ucredit.me/"
 						title="Ucredit"
 						github="https://github.com/uCredit-Dev/ucredit_frontend_typescript"
 						content="A simple real time messaging application build with Node, Express, and Socket.io. Complete with usernames and connect/disconnect messages."
 					/>
 				</div>
 				<div className="h-[25%] flex flex-row gap-16 ">
-					<img src={bloochat} className="h-[156px] w-full" />
+					<Bloochat className="h-[156px] w-full" />
 					<ProjectIntro
 						type="long"
 						website="https://bloochat-jluo30.herokuapp.com"
@@ -250,7 +250,7 @@ function Frontend() {
 					/>
 				</div>
 				<div className="h-[25%] flex flex-row gap-16">
-					<img src={course} className="h-[156px] w-full" />
+					<Course className="h-[156px] w-full" />
 					<ProjectIntro
 						type="long"
 						title="Course Planner"
@@ -273,7 +273,7 @@ function Backend() {
 			</div>
 			<div className="h-[80%] flex flex-col gap-14 ">
 				<div className="h-[32%] flex flex-row gap-12">
-					<img src={chess} className="h-[200px] w-full" />
+					<Chess className="h-[200px] w-full" />
 					<div className="">
 						<ProjectIntro
 							type="ml"
@@ -323,8 +323,7 @@ function Backend() {
 		</div>
 	);
 }
-
-function Databases() {
+const Databases = () => {
 	return (
 		<div className="font-[Poppins] pt-4 flex flex-col px-[120px] ml-2 gap-5">
 			<div className="h-[16%] font-semibold text-[#383838] text-center mt-1">
@@ -333,7 +332,7 @@ function Databases() {
 			</div>
 			<div className="h-[80%] flex flex-col gap-24">
 				<div className="h-[25%] flex flex-row gap-12 ">
-					<img src={db} className="h-[185px] w-full" />
+					<Db className="h-[195px] w-full mt-[-15px]"/>
 					<div className="">
 						<ProjectIntro
 							type="long"
@@ -345,7 +344,8 @@ function Databases() {
 					</div>
 				</div>
 				<div className="h-[25%] flex flex-row gap-12 ">
-					<img src={research} className="h-[185px] w-full" />
+					<Research className="h-[195px] w-full mt-[-15px]"/>
+				{/* <img src={Research} class="h-[185px] w-full" /> */}
 					<ProjectIntro
 						type="long"
 						title="Robotic Lab Experiment Result Analysis"
@@ -361,16 +361,16 @@ function Databases() {
 function Skills(props) {
 	return (
 		<div className="font-[Poppins] py-8 w-[1150px] flex flex-col text-center items-center">
-			<div className="h-[18%] text-center">
+			<div className="h-[20%] text-center">
 				<div className="text-[40px] font-semibold text-[#383838]">Skills</div>
 				<div className="text-[18px] font-medium text-[#616161]">My technical level</div>
 			</div>
-			<div className="h-[80%] w-full flex flex-row px-6 items-center mr-1">
+			<div className="h-[82%] w-full flex flex-row px-6 items-center mr-1 mt-[-15px]">
 				<div className="w-1/2 h-full flex flex-col">
 					<div className="h-1/2 flex flex-col px-6 border-r-2 border-[#DBDBDB] border-dotted items-center">
 						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Frontend</div>
 						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row mt-2 gap-4">
+						<div className="h-[200px] flex flex-row gap-4">
 							<img src={react} class="w-[125px] h-full" />
 							<img src={tailwind} class="w-[125px] h-full  " />
 							<img src={swift} class="w-[125px] h-full mt-1" />
@@ -380,7 +380,7 @@ function Skills(props) {
 					<div className="h-1/2 flex flex-col px-6 border-t-2 border-r-2 border-[#DBDBDB] border-dotted items-center">
 						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Databases</div>
 						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row gap-6">
+						<div className="h-[200px] flex flex-row gap-6 mt-[-5px]">
 							<img src={sql} class="w-[140px] h-full" />
 							<img src={mongodb} class="w-[140px] h-full" />
 						</div>

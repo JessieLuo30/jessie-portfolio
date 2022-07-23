@@ -393,7 +393,7 @@ function Skills(props) {
 						<div className="h-[200px] flex flex-row mt-2 items-center gap-4 ml-4">
 							<img src={c} class="w-[110px] h-full" />
 							<img src={python} class="w-[110px] h-full" />
-							<img src={java} class="w-[110px] h-full" />
+							<img src={java} class="w-[110px]  h-full" />
 							<img src={php} class="w-[110px] h-full" />
 						</div>
 					</div>
@@ -456,7 +456,7 @@ function Portfolio() {
 				}}
 			>
 				<div className="absolute left-[70%] top-[18%] h-[85px] w-[240px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
-					<div className="text-[32px] font-lg text-[#616161]">IOS</div>
+					<div className="text-[32px] font-lg text-[#616161] pt-[2px]">IOS</div>
 				</div>
 			</a>
 			<a
@@ -465,7 +465,7 @@ function Portfolio() {
 				}}
 			>
 				<div className="absolute left-[75%] top-[35%] h-[85px] w-[280px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
-					<div className="text-[32px] font-lg text-[#616161]">Frontend</div>
+					<div className="text-[32px] font-lg text-[#616161] pt-[2px]">Frontend</div>
 				</div>
 			</a>
 			<a
@@ -473,8 +473,8 @@ function Portfolio() {
 					window.location.href = '/portfolio/backend';
 				}}
 			>
-				<div className="absolute left-[77%] top-[52%] h-[85px] w-[280px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
-					<div className="text-[32px] font-lg text-[#616161]">Backend</div>
+				<div className="absolute left-[76%] top-[52%] h-[85px] w-[300px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
+					<div className="text-[32px] font-lg text-[#616161] pt-[2px]">C / C++ / Java</div>
 				</div>
 			</a>
 			<a
@@ -482,8 +482,8 @@ function Portfolio() {
 					window.location.href = '/portfolio/databases';
 				}}
 			>
-				<div className="absolute left-[71%] top-[68%] h-[85px] w-[280px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
-					<div className="text-[32px] font-lg text-[#616161]">Databases</div>
+				<div className="absolute left-[73%] top-[68%] h-[85px] w-[220px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
+					<div className="text-[32px] font-lg text-[#616161] pt-[2px]">SQL</div>
 				</div>
 			</a>
 			<a
@@ -491,7 +491,7 @@ function Portfolio() {
 					window.location.href = '/portfolio/game';
 				}}
 			>
-				<div className="absolute left-[56%] top-[82%] h-[85px] w-[240px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
+				<div className="absolute left-[60%] top-[82%] h-[85px] w-[240px] rounded-[35px] border-[#DBDBDB] border-2 hover:bg-[#D0D7D0]/25 py-[15px] text-center">
 					<div className="text-[32px] font-lg text-[#616161]">Game</div>
 				</div>
 			</a>

@@ -8,6 +8,7 @@ import back from './icons/back.svg';
 import work from './icons/work.svg';
 import education from './icons/education.svg';
 import gpa from './icons/gpa.svg';
+
 import project from './icons/project.svg';
 import company from './icons/company.svg';
 import calender from './icons/calender.svg';
@@ -59,7 +60,7 @@ function App() {
 	return (
 		<Router>
 			<div>
-				<div className="font-[Poppins] flex flex-col h-screen w-full bg-cover bg-fixed bg-[url('https://s3-alpha-sig.figma.com/img/4d01/9258/132506b7dfdd6884efb5d11b548183d4?Expires=1658707200&Signature=EsO8aT~4FgoXIFugn~jd92uuiA8BiPWQz1TxnFRlnwhM~iOynLuqOCO2y2A3p6drOVLjXqVahq7vzgKzMIT3xjm6nSX-~~TsZpZmqPLVVoiPVf6URNXIraLLD6qvb1MUnPw3QMHhQnuLTlSTpKLhy1trTIfU5S1GAp7GPxdXUJh~7soLTBR2nh2vqTX~5vAS07PqyBDo0oYXYGdWXwBpYffX59R1I~MZhrIgJhcFevkBEbx4UZECxBpMISC3HnJnllaptO9xX9xzCHF891kdVZbDmf1OKzbe6NEB3~9WmfkaLw8QYUF0zjuaJaBrmuY6T8yBoC74z8rQtarVwAU4Tw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA')]">
+				<div className="font-[Poppins] flex flex-col h-screen w-full bg-cover bg-fixed bg-[url('./bg.png')]">
 					{/* top bar */}
 					<div className="h-[90px] fixed w-screen border-[0.5px] font-semibold  border-gray flex flex-row text-primary">
 						<div className="text-[36px] py-4 px-6 tracking-widest w-[65%] flex flex-row">
@@ -106,7 +107,7 @@ function App() {
 							<div className="h-[35%]  ">
 								<div className="pl-1 pb-1 h-[172px] w-[172px] bg-primary mt-12 rounded-[86px]">
 									<img
-										src="https://s3-alpha-sig.figma.com/img/7fab/d69d/dbfa772f3dcd36cb6f0ce3eced913728?Expires=1658707200&Signature=gIC5vKX6g4ZKNapCFyEbPu8IzL~00H24aoRXf6kiPF7IF74M0evMqTOr4yBcidewWiAkAPBBAx2S~oe0bsfqfRTLvMZT04Zubp6gL0kERg6yc1c8WqPrh1twHci-7SnFJASKJPzoqyXMBu9K7bScde2reaMuwDpcOhIkpS3JxWEO~vFCw4XLMJ0CVQfRhQDmz5cvrWj54zMxlYySw9bh0zub6DDD7Q7TPEyWnpNK8zFdcBypyKloOjWyyu7lQF93CXmQaGdJaYvgS2GB4WSyUj8eV2MoGZkdL7PhyPyX0hg-6wksNRz73bUqb2TN1bAYTomR0cIFZs0-rZeVaPsKGg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+										src="https://i.im.ge/2022/07/28/F9bgqM.jpg"
 										class="w-[164px] h-[164px] mb-5 rounded-[82px]"
 										alt="..."
 									/>
@@ -188,7 +189,7 @@ function Game() {
 					<Ruby className="h-[150px] w-full" />
 					<ProjectIntro
 						type="long"
-						language={[ 'Unity']}
+						language={[ 'Unity' ]}
 						projType="Individual"
 						title="Ruby's Advanture"
 						github="https://github.com/JessieLuo30/Ruby-s-Advanture"
@@ -213,7 +214,7 @@ function Game() {
 						type="long"
 						title="Meme Generator"
 						language={[ 'JavaScript', 'CSS', 'HTML' ]}
-							projType="Individual"
+						projType="Individual"
 						website="https://meme-generator-jluo30.netlify.app/"
 						github="https://github.com/cs280spring-classroom/meme-generator-Jessie-ghub"
 						content="A React application that randomly generates cute memes. Fetch image data from https://api.imgflip.com/get_memes API."
@@ -311,7 +312,6 @@ function Backend() {
 								<button className="h-[18px] ml-2 mt-[7px] w-auto px-2 text-[11px] text-primary border-[1px] border-primary">
 									C
 								</button>
-								
 							</div>
 							<div className="text-[15px] w-[950px] font-medium text-[#747474] mt-1">
 								A C application that allows users to perform tasks including song production, remix, and
@@ -327,7 +327,6 @@ function Backend() {
 								<button className="h-[18px] ml-2 mt-[7px] w-auto px-2 text-[11px] text-primary border-[1px] border-primary">
 									Java
 								</button>
-								
 							</div>
 							<div className="text-[15px] w-[950px] font-medium text-[#747474] mt-1">
 								A Java implemented algorithm built on directed graph and binary tree
@@ -342,7 +341,6 @@ function Backend() {
 								<button className="h-[18px] ml-2 mt-[7px] w-auto px-2 text-[11px] text-primary border-[1px] border-primary">
 									C++
 								</button>
-								
 							</div>
 							<div className="text-[15px] w-[950px] font-medium text-[#747474] mt-1">
 								A C++ program to analyze digraphs and trigraphs in an input text file. If a number is
@@ -385,7 +383,7 @@ const Databases = () => {
 					{/* <img src={Research} class="h-[185px] w-full" /> */}
 					<ProjectIntro
 						type="long"
-						language={[ 'MySQL']}
+						language={[ 'MySQL' ]}
 						projType="individual"
 						title="Lab Experiment Result Analysis"
 						github="https://livejohnshopkins-my.sharepoint.com/:w:/g/personal/jluo30_jh_edu/EQCM6BUPq-hIrDsDsZDfRJgBVgVGAJu8gl03rINftkG4Tg?e=wc6Rfo"
@@ -628,7 +626,6 @@ function ProjectIntro(props) {
 						<button className="h-[18px] ml-2 mt-[7px] w-auto px-2 text-[11px] text-primary border-[1px] border-primary">
 							{props.language}
 						</button>
-						
 					</div>
 					<div className="text-[15px] w-[600px] font-medium text-[#747474] mt-1">{props.content}</div>
 				</div>

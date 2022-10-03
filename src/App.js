@@ -397,53 +397,19 @@ const Databases = () => {
 
 function Skills(props) {
 	return (
-		<div className="font-[Poppins] py-8 w-[1150px] flex flex-col text-center items-center">
+		<div className="font-[Poppins] py-8 w-[1150px] px-56 flex flex-col text-center items-center">
 			<div className="h-[20%] text-center">
 				<div className="text-[40px] font-semibold text-[#383838]">Skills</div>
 				<div className="text-[18px] font-medium text-[#616161]">My technical level</div>
 			</div>
-			<div className="h-[82%] w-full flex flex-row px-6 items-center mr-1 mt-[-15px]">
-				<div className="w-1/2 h-full flex flex-col">
-					<div className="h-1/2 flex flex-col px-6 border-r-2 border-[#DBDBDB] border-dotted items-center">
-						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Frontend</div>
-						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row gap-4">
-							<img src={react} class="w-[125px] h-full" />
-							<img src={tailwind} class="w-[125px] h-full  " />
-							<img src={swift} class="w-[125px] h-full mt-1" />
-						</div>
-					</div>
-
-					<div className="h-1/2 flex flex-col px-6 border-t-2 border-r-2 border-[#DBDBDB] border-dotted items-center">
-						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Databases</div>
-						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row gap-6 mt-[-5px]">
-							<img src={sql} class="w-[140px] h-full" />
-							<img src={mongodb} class="w-[140px] h-full" />
-						</div>
-					</div>
-				</div>
-				<div className="w-1/2 h-full flex flex-col">
-					<div className="h-1/2 flex flex-col px-6">
-						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Backend</div>
-						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row mt-2 items-center gap-4 ml-4">
-							<img src={c} class="w-[110px] h-full" />
-							<img src={python} class="w-[110px] h-full" />
-							<img src={java} class="w-[110px]  h-full" />
-							<img src={php} class="w-[110px] h-full" />
-						</div>
-					</div>
-					<div className="h-1/2 flex flex-col px-6 border-t-2 border-[#DBDBDB] border-dotted">
-						<div className="text-[16px] h-[10%] font-semibold  mt-6 ">Design</div>
-						<div className="text-[14px] font-medium text-[#616161]">8 months</div>
-						<div className="h-[200px] flex flex-row gap-4 ml-14">
-							<img src={figma} class="w-[125px] h-full" />
-							<img src={powerpoint} class="w-[125px] h-full" />
-							<img src={pr} class="w-[125px] h-full" />
-						</div>
-					</div>
-				</div>
+			<div className="h-[82%] mt-8 text-[18px] w-full flex flex-col  text-left gap-8 mr-1 ">
+				<div>• Languages: Java (Proficient), C/C++ (Proficient), Python, Swift, PHP</div>
+				<div>• Web: TypeScript (Proficient), JavaScript, HTML/CSS, jQuery</div>
+				<div>• Framework: React.js (Proficient), Node.js (Advanced), Spring Boot, Bootstrap</div>
+				<div>• Testing Framework: Cypress, Jest </div>
+				<div>• Database: MySQL(Proficient), MongoDB (Advanced), PostgreSQL, SQL </div>
+				<div>• UI/UX Design: Figma (Advanced), Photoshop, Canvas </div>
+				<div>• Software/Tools: Tableau(Intermediate), Google Cloud, Docker, GIT, Postman</div>
 			</div>
 		</div>
 	);
